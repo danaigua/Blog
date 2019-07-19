@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qiuzhisystem.dao.BloggerDao">
+<mapper namespace="com.qiuzhisystem.dao.IBlogerDao">
 
-	<resultMap type="Blogger" id="BloggerResult">
+	<resultMap type="Bloger" id="BlogerResult">
 		<result property="id" column="id" />
 		<result property="userName" column="userName" />
 		<result property="password" column="password" />
@@ -15,15 +15,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 
 	<select id="getByUserName" parameterType="String"
-		resultMap="BloggerResult">
+		resultMap="BlogerResult">
 		select * from t_blogger where userName=#{userName}
 	</select>
 
-	<select id="find" resultMap="BloggerResult">
+	<select id="find" resultMap="BlogerResult">
 		select * from t_blogger where id=1;
 	</select>
 
-	<update id="update" parameterType="Blogger">
+	<update id="update" parameterType="Bloger">
 		update t_blogger
 		<set>
 			<if test="password!=null and password!=''">

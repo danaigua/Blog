@@ -168,7 +168,7 @@
 		<dependency>
 			<groupId>commons-collections</groupId>
 			<artifactId>commons-collections</artifactId>
-			<version>3.2.1</version>
+			<version>3.2.2</version>
 		</dependency>
 		<!-- Jakarta Commons-logging（JCL）是apache最早提供的日志的门面接口。提供简单的日志实现以及日志解耦功能。 -->
 		<dependency>
